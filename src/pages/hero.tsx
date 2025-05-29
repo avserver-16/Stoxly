@@ -8,7 +8,7 @@ const Hero = () => {
       sx={{
         position: 'relative',
         width: '100%',
-        height: '95vh',
+        height: '100vh',
         backgroundColor: '#000', 
         display: 'flex',
         alignItems: 'center',
