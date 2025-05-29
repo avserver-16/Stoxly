@@ -35,6 +35,7 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
   };
 
+
   return (
     <AppBar position="fixed" sx={{ backgroundColor: 'rgba(0,0,0,1)' ,height:'75px',display:'flex',alignItems:'center'}}>
       <Container maxWidth="xl">

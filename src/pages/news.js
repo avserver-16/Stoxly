@@ -5,7 +5,8 @@ import { Box, Grid } from "@mui/material";
 export default function News() {
   const [newsData, setNewsData] = useState([]);
 
-  const API_KEY = 'sk-live-kjKOglAlDH8DP7HHALkAcZcgFItam4XslC6XxS86';
+ const API_KEY = process.env.REACT_APP_API_KEY;
+
 
   async function getData() {
     try {
