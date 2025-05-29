@@ -5,7 +5,7 @@ import News from './pages/news.js';
 
 function App() {
   return (
-    <div className="App" sx={{backgroundColor:'#262626'}}>
+    <div className="App" >
       <ResponsiveAppBar/>
       <Hero/>
       <News/>

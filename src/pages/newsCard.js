@@ -7,6 +7,7 @@ import CardActionArea from '@mui/material/CardActionArea';
 
 
 function NewsCard({title,content}) {
+    
   return (
     <Card sx={{ maxWidth: 345,backgroundColor:'rgba(25,25,25,0.6)'}}>
       <CardActionArea>
