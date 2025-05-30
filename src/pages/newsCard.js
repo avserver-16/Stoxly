@@ -23,7 +23,7 @@ function wordCutter(str, size) {
 }
   
   return (
-    <Card sx={{ maxWidth: 350, backgroundColor: 'rgba(25,25,25,0.6)' ,maxHeight:450,marginRight:10}}>
+    <Card sx={{ maxWidth: 350, backgroundColor: 'rgba(25,25,25,0.6)' ,maxHeight:450,minWidth:200}}>
       <CardActionArea href={link}>
         <CardMedia
           component="img"
@@ -32,11 +32,8 @@ function wordCutter(str, size) {
           alt={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" sx={{ color: '#9EFF00' }}>
-            {title}
-          </Typography>
-          <Typography variant="body2" sx={{ color: '#FFF' }}>
-            {wordCutter(content,20)}
+          <Typography gutterBottom variant="h5" component="div" sx={{ color: 'rgba(158, 255, 0,0.7)' }}>
+            {wordCutter(title,10)}
           </Typography>
         </CardContent>
       </CardActionArea>

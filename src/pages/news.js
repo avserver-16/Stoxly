@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import NewsCard from "./newsCard";
 import { Box, Grid } from "@mui/material";
-
+import { Typography } from "@mui/joy";
 export default function News() {
   const [newsData, setNewsData] = useState([]);
 
@@ -36,9 +36,22 @@ export default function News() {
     getData();
   }, []);
 
-  return (
-    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', backgroundColor: 'black', marginLeft: 12, zIndex: 15 ,alignSelf:'center',padding:5}}>
-      <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} justifyContent={'center'}>
+  return (<>
+    <Typography
+  level="h1"
+  color="neutral"
+  sx={{
+    fontSize: '2rem',
+    fontWeight: 'bold',
+    mb: 2, // margin bottom
+    textAlign: 'center',
+    color: '#FFF', // or any color that gives contrast
+    paddingY:10,
+  }}
+  alignSelf={'flex-start'}
+>News</Typography>
+    <Box sx={{ flexGrow: 1, display: 'flex', backgroundColor: 'black', zIndex: 15 ,justifyContent:'space-around',paddingBottom:10}}>
+      <Grid container spacing={{ xs: 3, md: 20 }} columns={{ xs: 4, sm: 8, md: 12 }} justifyContent={'center'}>
        {newsData.slice(0,3).map((item, index) => (
           <Grid key={index} item xs={2} sm={4} md={4}>
             <NewsCard title={item.title} content={item.summary || item.content || "No summary"} link={item.url} imageUrl={item.image_url}/>
@@ -46,5 +59,6 @@ export default function News() {
         ))}
       </Grid>
     </Box>
+    </>
   );
 }

@@ -36,7 +36,7 @@ const Hero = () => {
       {/* Hero Content */}
       <Container sx={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
         <Typography variant="h2" component="h1" gutterBottom sx={{color:'white'}}>
-          Welcome to Stocker
+          Welcome to Stoxly
         </Typography>
 
         <Typography variant="h5" color="white" paragraph >
