@@ -37,11 +37,11 @@ export default function News() {
   }, []);
 
   return (
-    <Box sx={{ flexGrow: 2, display: 'flex', alignItems: 'center', backgroundColor: 'black', paddingX: 5, marginTop: -5, zIndex: 15 }}>
+    <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', backgroundColor: 'black', marginLeft: 12, zIndex: 15 ,alignSelf:'center',padding:5}}>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }} justifyContent={'center'}>
-       {newsData.slice(0,6).map((item, index) => (
+       {newsData.slice(0,3).map((item, index) => (
           <Grid key={index} item xs={2} sm={4} md={4}>
-            <NewsCard title={item.title} content={item.summary || item.content || "No summary"} />
+            <NewsCard title={item.title} content={item.summary || item.content || "No summary"} link={item.url} imageUrl={item.image_url}/>
           </Grid>
         ))}
       </Grid>

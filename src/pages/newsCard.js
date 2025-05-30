@@ -6,23 +6,37 @@ import Typography from '@mui/material/Typography';
 import CardActionArea from '@mui/material/CardActionArea';
 
 
-function NewsCard({title,content}) {
-    
+function NewsCard({ title, content, link,imageUrl }) {
+function wordCutter(str, size) {
+  const a = str.split(" ");
+  let b = "";
+  let m = 0;
+
+  for (const word of a) {
+    if (m >= size) break;  
+    if (m > 0) b += " ";   
+    b += word;
+    m++;
+  }
+
+  return b+"...";
+}
+  
   return (
-    <Card sx={{ maxWidth: 345,backgroundColor:'rgba(25,25,25,0.6)'}}>
-      <CardActionArea>
+    <Card sx={{ maxWidth: 350, backgroundColor: 'rgba(25,25,25,0.6)' ,maxHeight:450,marginRight:10}}>
+      <CardActionArea href={link}>
         <CardMedia
           component="img"
-          height="140"
-          image="https://img.freepik.com/premium-psd/black-bull-charging-forward-front-green-stock-market-chart_514761-15005.jpg"
+          height="180"
+          image={imageUrl}
           alt={title}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div" sx={{color:'#9EFF00'}}>
-          {title}
+          <Typography gutterBottom variant="h5" component="div" sx={{ color: '#9EFF00' }}>
+            {title}
           </Typography>
           <Typography variant="body2" sx={{ color: '#FFF' }}>
-         {content}
+            {wordCutter(content,20)}
           </Typography>
         </CardContent>
       </CardActionArea>
