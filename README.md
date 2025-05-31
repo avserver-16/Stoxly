@@ -9,7 +9,7 @@ In the fast-paced world of finance, investors, traders, and researchers often re
 To build a **responsive, single-page financial dashboard** that consolidates and presents **real-time stock market data**, **commodity prices**, and **latest financial news headlines** in an organized and accessible format. The dashboard must be cleanly structured with smooth in-page navigation using `react-scroll`, enabling users to instantly jump to specific sections like "Active Stocks," "Commodities," or "News".
 
 
-### 🎯 **Core Features:**
+###  **Core Features:**
 
 1. **Active Stock Listings**
 
@@ -42,7 +42,7 @@ To build a **responsive, single-page financial dashboard** that consolidates and
 
 
 
-### 🛠️ **Tech Stack:**
+###  **Tech Stack:**
 
 * **Frontend:** React, Material-UI (MUI), react-scroll
 * **Data Sources:** Alpha Vantage / Finnhub / Yahoo Finance APIs (for stocks/commodities), NewsAPI / GNews (for financial headlines)
@@ -50,7 +50,7 @@ To build a **responsive, single-page financial dashboard** that consolidates and
 
 
 
-### ✅ **Success Criteria:**
+### **Success Criteria:**
 
 * Users can view all financial data in one page without page reloads.
 * Navigation to different sections is smooth and responsive.
