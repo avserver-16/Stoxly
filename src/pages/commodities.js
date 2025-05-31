@@ -1,14 +1,14 @@
 import Grid from '@mui/joy/Grid';
-import Weekhigh from './weekhigh';
+import CommoditiesCard from './commoditiescard';
 import { useEffect, useState } from 'react';
 import { Typography } from '@mui/joy';
 import { Box } from '@mui/material';
  const API_KEY = process.env.REACT_APP_API_KEY;
-export default function WeekhighCall() {
+export default function Commodities() {
 const [top,setTop]=useState([])
   async function getData() {
     try {
-      const response = await fetch("https://stock.indianapi.in/BSE_most_active", {
+      const response = await fetch("https://stock.indianapi.in/commodities", {
         method: "GET",
         headers: {
           "x-api-key": API_KEY,
@@ -49,7 +49,7 @@ setTop(data);
     paddingTop:10,
   }}
   alignSelf={'flex-start'}
->Top Gainers</Typography>
+>Commodities</Typography>
 <Grid
    
      container
@@ -58,7 +58,7 @@ setTop(data);
     >
 {top.slice(0,6).map((item,index)=>(
     
-       <Weekhigh key={index} company={item.company} price={item.price} change={item.percent_change} />
+       <CommoditiesCard key={index} company={item.product} price={item.buy_price} change={item.change} />
     
     ))}</Grid>
 </>

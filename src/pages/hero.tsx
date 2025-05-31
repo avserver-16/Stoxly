@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Button, Container } from '@mui/material';
 import heroImg from './assets/hero.png';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
@@ -43,10 +44,10 @@ const Hero = () => {
           Discover our awesome features and offerings.
         </Typography>
         <Button variant="contained" sx={{color:'black',backgroundColor:'#9EFF00',margin:'10px',borderRadius:'16px'}} size="large">
-          Indian Stocks
+          <Link to='active' smooth={true} duration={500} offset={-60}>Indian Market</Link>
         </Button>
         <Button variant="contained" sx={{color:'#9EFF00',backgroundColor:'rgba(0,0,0,0.3)',margin:'10px' ,border: '2px solid #9EFF00',borderRadius:'16px'}} size="large">
-         Foreign Stocks
+         <Link to='commodities' smooth={true} duration={500} offset={-60}>International Commodities</Link>
         </Button>
       </Container>
     </Box>

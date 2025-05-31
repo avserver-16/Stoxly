@@ -7,7 +7,7 @@ import CardActions from '@mui/joy/CardActions';
 import Typography from '@mui/joy/Typography';
 
 
-export default function Weekhigh({ company, price, change }) {
+export default function CommoditiesCard({ company, price, change }) {
   return (
     <Card variant="solid" invertedColors sx={{ mx: 6, my: 5, width: 300, backgroundColor: 'rgba(36, 36, 36,0.5)' }}>
       <CardContent orientation="horizontal">

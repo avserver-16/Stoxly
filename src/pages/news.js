@@ -45,8 +45,8 @@ export default function News() {
     fontWeight: 'bold',
     mb: 2, // margin bottom
     textAlign: 'center',
-    color: '#FFF', // or any color that gives contrast
-    paddingY:10,
+    color: '#9EFF00',
+    my:10
   }}
   alignSelf={'flex-start'}
 >News</Typography>
